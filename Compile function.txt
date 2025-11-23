@@ -1,0 +1,6 @@
+Just For Compile
+gcc main.c car_operations.c rental_operations.c customer_operations.c file_operations.c -o Project
+
+Compile and run
+gcc main.c car_operations.c rental_operations.c customer_operations.c file_operations.c -o Project_PF
+   Project_PF.exe
