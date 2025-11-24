@@ -78,7 +78,7 @@ void rentCar()
         pauseScreen();
         return;
     }
-    struct Rental nr;
+    struct Rental nr; //new rental record
     nr.rental_id = rental_count + 1;
     nr.customer_id = cid;
     nr.car_id = carid;
@@ -117,7 +117,7 @@ void returnCar()
         return;
     }
     clearBuffer();
-    int carind = searchCar(carid);
+    int carind = searchCar(carid); //returns car index from array
     if(carind == -1) 
     {
         printf("\n*** Error: Car ID %d not found! ***\n", carid);
@@ -206,10 +206,10 @@ void displayRevenue()
     printf("\n========================================\n");
     printf("       REVENUE & EARNINGS REPORT\n");
     printf("========================================\n");
-    float te = calcRevenue(0, 1, 0.0);
-    int rt = countRentals(0, 1, 0);
-    float ee = calcRevenue(0, 0, 0.0);
-    int ar = countRentals(0, 0, 0);
+    float te = calcRevenue(0, 1, 0.0); //Revenue from returned cars
+    int rt = countRentals(0, 1, 0); //No of returned cars
+    float ee = calcRevenue(0, 0, 0.0); //Expected Revenue of Active rentals
+    int ar = countRentals(0, 0, 0); //No of Active rents
     printf("\n--- TODAY'S EARNINGS ---\n");
     printf("Total Returns Today     : %d\n", rt);
     printf("Cash Received Today     : Rs. %.2f\n", te);
@@ -235,7 +235,7 @@ void displayRevenue()
                 int ci = findCustomerById(rentals[i].customer_id);
                 if(carind != -1 && ci != -1) 
                 {
-                    char cn[30];
+                    char cn[30]; //For conversion to string
                     snprintf(cn, sizeof(cn), "%s %s", cars[carind].brand, cars[carind].model);
                     printf("%-8d %-20s %-15s Rs. %.2f\n", rentals[i].rental_id, customers[ci].name, cn, rentals[i].total_cost);
                 }
