@@ -85,7 +85,7 @@ void displayCars()
     int i = 0;
     do 
     {
-        printf("%-5d %-15s %-15s Rs. %-8.2f %-10s\n", cars[i].id, cars[i].brand, cars[i].model, cars[i].rent_per_day, cars[i].is_rented ? "[RENTED]" : "[Available]");
+        printf("%-5d %-15s %-15s Rs. %-8.2f %-10s\n", cars[i].id, cars[i].brand, cars[i].model, cars[i].rent_per_day, cars[i].is_rented ? "RENTED" : "Available");
         i++;
     } 
     while(i < car_count);
