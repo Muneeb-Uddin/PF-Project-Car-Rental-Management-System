@@ -25,7 +25,7 @@ void registerNewCustomer()
         pauseScreen();
         return;
     }
-    struct Customer nc;
+    struct Customer nc; //New customer
     printf("\nEnter Customer ID (Unique Number): ");
     if(scanf("%d", &nc.id) != 1) 
     {
@@ -99,7 +99,7 @@ void searchCarDetails()
     printf("Brand            : %s\n", cars[found].brand);
     printf("Model            : %s\n", cars[found].model);
     printf("Rent per Day     : Rs. %.2f\n", cars[found].rent_per_day);
-    printf("Status           : %s\n", cars[found].is_rented ? "[RENTED]" : "[AVAILABLE]");
+    printf("Status           : %s\n", cars[found].is_rented ? "RENTED" : "AVAILABLE");
     if(cars[found].is_rented == 1) 
     {
         printf("\n--- Currently Rented By ---\n");
