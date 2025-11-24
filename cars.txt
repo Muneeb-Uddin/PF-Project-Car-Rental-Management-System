@@ -1,4 +1,4 @@
-30
+33
 1 Toyota Corolla 8000.00 0
 2 Honda Civic 9500.00 0
 3 Suzuki Alto 5000.00 0
@@ -29,3 +29,6 @@
 28 KIA Sorento 17000.00 0
 29 Hyundai Sonata 10500.00 0
 30 Changan Oshan 14500.00 0
+31 Tesla A5 6000.00 0
+123 toyota corolla 23.00 0
+124 toyotA JOE 1234.00 0
