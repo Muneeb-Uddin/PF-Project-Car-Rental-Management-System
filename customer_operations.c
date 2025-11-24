@@ -17,7 +17,7 @@ void registerNewCustomer()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("       REGISTER NEW CUSTOMER\n");
+    printf("\t\tREGISTER NEW CUSTOMER\n");
     printf("========================================\n");
     if(customer_count >= MAX_CUSTOMERS) 
     {
@@ -60,7 +60,7 @@ void registerNewCustomer()
     customers[customer_count] = nc;
     customer_count++;
     printf("\n========================================\n");
-    printf("  Customer Registered Successfully!\n");
+    printf("\tCustomer Registered Successfully!\n");
     printf("========================================\n");
     printf("Customer ID: %d\n", nc.id);
     printf("Name: %s\n", nc.name);
@@ -73,7 +73,7 @@ void searchCarDetails()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("          SEARCH CAR\n");
+    printf("\t\tSEARCH CAR\n");
     printf("========================================\n");
     int cid;
     printf("\nEnter Car ID to search: ");
@@ -93,7 +93,7 @@ void searchCarDetails()
         return;
     }
     printf("\n========================================\n");
-    printf("          CAR DETAILS\n");
+    printf("\t\tCAR DETAILS\n");
     printf("========================================\n");
     printf("Car ID           : %d\n", cars[found].id);
     printf("Brand            : %s\n", cars[found].brand);
@@ -129,7 +129,7 @@ void displayAllCustomers()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("       ALL CUSTOMERS (SUMMARY)\n");
+    printf("\t\tALL CUSTOMERS (SUMMARY)\n");
     printf("========================================\n");
     if(customer_count == 0) 
     {
@@ -191,7 +191,7 @@ void displayCustomerDetails(int ci)
 {
     system("cls");
     printf("\n========================================\n");
-    printf("      CUSTOMER DETAILED VIEW\n");
+    printf("\t\tCUSTOMER DETAILED VIEW\n");
     printf("========================================\n");
     printf("\n--- CUSTOMER INFORMATION ---\n");
     printf("ID      : %d\n", customers[ci].id);

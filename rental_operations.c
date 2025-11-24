@@ -7,7 +7,7 @@ void rentCar()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("          RENT A CAR\n");
+    printf("\t\tRENT A CAR\n");
     printf("========================================\n");
     int cid;
     printf("\nEnter Customer ID: ");
@@ -90,7 +90,7 @@ void rentCar()
     rentals[rental_count] = nr;
     rental_count++;
     printf("\n========================================\n");
-    printf("  Car Rented Successfully!\n");
+    printf("\tCar Rented Successfully!\n");
     printf("========================================\n");
     printf("Rental ID: %d\n", nr.rental_id);
     printf("Customer: %s (ID: %d)\n", customers[ci].name, cid);
@@ -105,7 +105,7 @@ void returnCar()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("          RETURN A CAR\n");
+    printf("\t\tRETURN A CAR\n");
     printf("========================================\n");
     int carid;
     printf("\nEnter Car ID to return: ");
@@ -131,7 +131,7 @@ void returnCar()
         pauseScreen();
         return;
     }
-    int rind = -1;
+    int rind = -1; //rental index
     int i = 0;
     while(i < rental_count) 
     {
@@ -157,7 +157,7 @@ void returnCar()
     }
     printf("\n");
     printf("================================================\n");
-    printf("            RENTAL BILL INVOICE\n");
+    printf("\t\tRENTAL BILL INVOICE\n");
     printf("================================================\n");
     printf("Rental ID        : %d\n", rentals[rind].rental_id);
     printf("------------------------------------------------\n");
@@ -204,7 +204,7 @@ void displayRevenue()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("       REVENUE & EARNINGS REPORT\n");
+    printf("\t\tREVENUE & EARNINGS REPORT\n");
     printf("========================================\n");
     float te = calcRevenue(0, 1, 0.0); //Revenue from returned cars
     int rt = countRentals(0, 1, 0); //No of returned cars
@@ -232,7 +232,7 @@ void displayRevenue()
             if(rentals[i].is_returned == 1) 
             {
                 int carind = searchCar(rentals[i].car_id);
-                int ci = findCustomerById(rentals[i].customer_id);
+                int ci = findCustomerById(rentals[i].customer_id); //customer index
                 if(carind != -1 && ci != -1) 
                 {
                     char cn[30]; //For conversion to string
@@ -252,9 +252,10 @@ void displayRevenue()
         int i = 0;
         while(i < rental_count) 
         {
-            if(rentals[i].is_returned == 0) {
+            if(rentals[i].is_returned == 0) 
+            {
                 int carind = searchCar(rentals[i].car_id);
-                int ci = findCustomerById(rentals[i].customer_id);
+                int ci = findCustomerById(rentals[i].customer_id); //customer index
                 if(carind != -1 && ci != -1) 
                 {
                     char cn[30];

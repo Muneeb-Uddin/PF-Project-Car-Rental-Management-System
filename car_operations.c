@@ -5,7 +5,7 @@ void addCar()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("          ADD NEW CAR\n");
+    printf("\t\tADD NEW CAR\n");
     printf("========================================\n");
     if(car_count >= MAX_CARS) 
     {
@@ -71,7 +71,7 @@ void displayCars()
 {
     system("cls");
     printf("\n========================================\n");
-    printf("          ALL CARS LIST\n");
+    printf("\t\tALL CARS LIST\n");
     printf("========================================\n");
     if(car_count == 0) 
     {
