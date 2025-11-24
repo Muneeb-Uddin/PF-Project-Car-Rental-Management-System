@@ -98,7 +98,7 @@ int main()
                 printf("\t\tTHANK YOU!\n");
                 printf("========================================\n");
                 printf("\nDeveloped by: Muneeb Uddin 25K-0765\n");
-                printf("Course: Programming Fundamentals CL1002\n");
+                printf("Course: Programming Fundamentals\nCourse Code: CS 1002\n");
                 printf("\n========================================\n");
                 pauseScreen();
                 return 0;
